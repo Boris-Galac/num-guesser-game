@@ -225,7 +225,7 @@ body {
   }
   .widget {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 2rem;
     padding: 2rem;
   }
@@ -236,7 +236,7 @@ body {
   .prev-nums {
     left: 3rem;
     top: 3rem;
-    background: rgba(5, 87, 135, 0.4);
+    /* background: rgba(5, 87, 135, 0.4); */
     border-radius: 5px;
     color: #fff;
     padding: .8rem;
@@ -252,7 +252,7 @@ body {
   .num-guesser-app {
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 55%;
     left: 50%;
     box-shadow: 0 0 5px rgb(175, 186, 192);
     background-color: #f5faf9;
@@ -260,7 +260,7 @@ body {
     padding: 1rem;
   }
   .notification {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     top: 15rem;
     position: absolute;
@@ -268,5 +268,17 @@ body {
     left: 50%;
     text-align: center;
     animation: notification 4s forwards ease-in-out;
+  }
+  .hint {
+    position: absolute;
+    top: 12rem;
+    font-size: 1.15rem;
+    transform: translateX(-50%);
+    left: 50%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #40494e;
+    font-weight: 400;
   }
 }

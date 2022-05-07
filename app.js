@@ -16,7 +16,7 @@ const guess_game = (e) => {
   widget.classList.add('active');
   if (guessCount === 2) {
     prevNum.innerHTML = `
-       <p style="font-weight: 500; background: rgba(5, 87, 135, 0.3);">Previous numbers: </p>
+       <p style="font-weight: 500; background: rgba(5, 87, 135, 0.1);">Previous numbers: </p>
     `;
   }
   prevNum.innerHTML += `${guessNum}, `;
