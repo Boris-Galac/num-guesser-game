@@ -4,7 +4,7 @@ const resetBtn = document.querySelector('.reset-btn');
 const widget = document.querySelector('.widget');
 let prevNum = document.querySelector('.prev-nums');
 let remainTurns = document.querySelector('.remain-turns');
-let randomNum = Math.floor(Math.random() * 5) + 1;
+let randomNum = Math.floor(Math.random() * 10) + 1;
 console.log(randomNum);
 
 let guessCount = 3;
@@ -22,7 +22,8 @@ const guess_game = (e) => {
   prevNum.innerHTML += `${guessNum}, `;
   // display remaining turns
   remainTurns.innerText = `Remain turns: ${guessCount}`;
-
+  // hint is guess number to high or too low
+  hint(guessNum);
   // win or loose
   if (guessNum === randomNum) {
     win_or_loose(true);
@@ -78,4 +79,23 @@ window.addEventListener('load', (e) => {
   inputNumber.focus();
 });
 
+const hint = (num) => {
+  let msg = document.createElement('div');
+  msg.classList.add('hint');
+  let container = document.querySelector('.container');
+  if (num !== randomNum) {
+    if (num > randomNum) {
+      msg.innerText = 'To High';
+      container.append(msg);
+    } else if (num < randomNum) {
+      msg.innerText = 'To Low';
+      container.append(msg);
+    } else if (num === randomNum) {
+      return;
+    }
+    setTimeout(() => {
+      msg.remove();
+    }, 1500);
+  }
+};
 submitBtn.addEventListener('click', guess_game);

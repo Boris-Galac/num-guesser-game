@@ -56,7 +56,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-
 }
 .container {
   display: grid;
@@ -70,6 +69,14 @@ body {
   border-radius: 3px;
   padding: 1rem;
 }
+.num-guesser-app {
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 0 5px rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 .form {
   display: flex;
   gap: 5px;
@@ -79,8 +86,23 @@ body {
   padding: .4rem;
   height: 100%;
 }
+.input-number {
+  border: none;
+  padding: .5rem;
+}
+.input-number:focus {
+  outline: 2px solid rgb(29, 141, 226);
+  border-radius: 2px;
+}
 .submit-btn {
   cursor: pointer;
+  background-color: rgb(231, 247, 255);
+  border: .5px solid rgb(185, 213, 242);
+  border-radius: 2px;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: rgb(213, 242, 255);
 }
 .widget {
   position: relative;
@@ -93,7 +115,7 @@ body {
   position: absolute;
   left: 3rem;
   top: 3rem;
-  background: rgba(5, 87, 135, 0.4);
+  background-color: rgba(5, 87, 135, 0.4);
   border-radius: 5px;
   color: #fff;
   padding: .8rem;
@@ -154,6 +176,49 @@ body {
     opacity: 1;
   }
 }
+.notification {
+  top: 7rem;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  text-align: center;
+  animation: notification 4s forwards ease-in-out;
+}
+@keyframes notification {
+  0%,
+  80% {
+    color: #262829;
+}
+  to {
+    color: transparent;
+  }
+}
+.hint {
+  position: absolute;
+  top: 30rem;
+  transform: translateX(-50%);
+  left: 50%;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  color: #40494e;
+  font-weight: 400;
+}
+.hint::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  display: block;
+  bottom: -18px;
+  clip-path: polygon(100% 0, 0 0, 49% 59%);
+  aspect-ratio: 1;
+  width: 20px;
+}
+
+
+/* responsive */
+
+
 @media (max-width:500px) {
   .container {
     display: contents;
@@ -194,19 +259,14 @@ body {
     border-radius: 3px;
     padding: 1rem;
   }
-}
-.notification {
-  top: 7rem;
-  position: absolute;
-  animation: notification 4s forwards ease-in-out;
-}
-@keyframes notification {
-  0%,
-  80% {
-    color: #262829;
-}
-
-  to {
-    color: transparent;
+  .notification {
+    font-size: 1.2rem;
+    text-align: center;
+    top: 15rem;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;
+    animation: notification 4s forwards ease-in-out;
   }
 }
