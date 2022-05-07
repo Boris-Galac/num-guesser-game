@@ -198,10 +198,14 @@ body {
 .notification {
   top: 7rem;
   position: absolute;
-  color: #262829;
   animation: notification 4s forwards ease-in-out;
 }
 @keyframes notification {
+  0%,
+  80% {
+    color: #262829;
+}
+
   to {
     color: transparent;
   }
