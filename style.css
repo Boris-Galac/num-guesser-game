@@ -228,10 +228,6 @@ body {
     gap: 2rem;
     padding: 2rem;
   }
-  /* .prev-nums,
-  .remain-turns {
-    position: static;
-  } */
   .prev-nums {
     left: 1.5rem;
     top: 3rem;
@@ -260,7 +256,7 @@ body {
   .notification {
     font-size: 1rem;
     text-align: center;
-    top: 15rem;
+    top: 5rem;
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
@@ -278,5 +274,15 @@ body {
     border-radius: 10px;
     color: #40494e;
     font-weight: 400;
+  }
+  @keyframes gameover {
+    from {
+      top: -10rem;
+      opacity: 0;
+    }
+    to {
+      top: 5rem;
+      opacity: 1;
+    }
   }
 }
