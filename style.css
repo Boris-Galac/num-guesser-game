@@ -195,3 +195,14 @@ body {
     padding: 1rem;
   }
 }
+.notification {
+  top: 7rem;
+  position: absolute;
+  color: #262829;
+  animation: notification 4s forwards ease-in-out;
+}
+@keyframes notification {
+  to {
+    color: transparent;
+  }
+}
