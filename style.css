@@ -225,26 +225,24 @@ body {
   }
   .widget {
     display: flex;
-    /* flex-direction: column; */
     gap: 2rem;
     padding: 2rem;
   }
-  .prev-nums,
+  /* .prev-nums,
   .remain-turns {
     position: static;
-  }
+  } */
   .prev-nums {
-    left: 3rem;
+    left: 1.5rem;
     top: 3rem;
-    /* background: rgba(5, 87, 135, 0.4); */
     border-radius: 5px;
     color: #fff;
     padding: .8rem;
   }
   .remain-turns {
-    right: 3rem;
+    right: 1.5rem;
     top: 3rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
     border: 1px solid gray;
     border-radius: 4px;
     padding: .5rem;
